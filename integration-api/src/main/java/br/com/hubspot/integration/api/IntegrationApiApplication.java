@@ -1,4 +1,4 @@
-package br.com.hubspot.integration_api;
+package br.com.hubspot.integration.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
