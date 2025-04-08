@@ -31,21 +31,10 @@ public class HubSpotContactsController {
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
-    @GetMapping("/callback")
-    public ResponseEntity<?> callback(@RequestParam Object payload) {
-        service.callbackContact(payload);
+    @PostMapping("/callback")
+    public ResponseEntity<?> callback() {
+        service.callbackContact("Testando callback de prod");
         return ResponseEntity.ok().body("Callback do webhook completado");
     }
 
-    @GetMapping("/aa")
-    public ResponseEntity<?> aaa(@RequestParam Object payload) {
-        service.callbackContact(payload);
-        return ResponseEntity.ok().body("Callback do webhook completado");
-    }
-
-    @PostMapping("/aa")
-    public ResponseEntity<?> aaas() {
-        service.callbackContact("teste");
-        return ResponseEntity.ok().body("Callback do webhook completado");
-    }
 }
