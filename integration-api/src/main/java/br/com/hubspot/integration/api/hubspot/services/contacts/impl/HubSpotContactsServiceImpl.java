@@ -1,6 +1,6 @@
 package br.com.hubspot.integration.api.hubspot.services.contacts.impl;
 
-import br.com.hubspot.integration.api.config.TokenManager;
+import br.com.hubspot.integration.api.token.TokenManager;
 import br.com.hubspot.integration.api.hubspot.client.HubSpotRestClient;
 import br.com.hubspot.integration.api.hubspot.dtos.ContactRequestDTO;
 import br.com.hubspot.integration.api.hubspot.dtos.DefaultResponseDTO;
