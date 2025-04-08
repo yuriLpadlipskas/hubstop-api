@@ -31,8 +31,10 @@ public class HubSpotOAuthController {
 
     @GetMapping("/callback")
     public ResponseEntity<?> callback(@RequestParam String code) {
-        service.exchageCodeToToken(code);
-        return ResponseEntity.ok().contentType(MediaType.TEXT_HTML).body(HtmlResponses.AUTH_SUCCESS);
+        String url = service.exchageCodeToToken(code);
+        return ResponseEntity.status(HttpStatus.FOUND)
+                .location(URI.create(url))
+                .build();
     }
 
 }

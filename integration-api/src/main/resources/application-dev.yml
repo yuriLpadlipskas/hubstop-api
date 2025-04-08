@@ -32,4 +32,9 @@ hubspot:
       uri: http://localhost:9091/hubspot/oauth/callback
   url:
     token: https://api.hubapi.com/oauth/v1/token
+    profile: https://api.hubapi.com/oauth/v1/access-tokens/
     contacts: https://api.hubapi.com/crm/v3/objects/contacts
+    redirect:
+        home:
+          url: https://app.hubspot.com/user-guide/
+          suffix: ?via=home
