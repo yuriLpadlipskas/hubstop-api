@@ -20,10 +20,7 @@ public class TokenCache {
     }
 
     public TokenResponseDTO getToken() {
-        if(tokenResponseDTO == null) {
-            return null;
-        }
-        return tokenResponseDTO;
+        return tokenResponseDTO == null ? null : tokenResponseDTO;
     }
 
     public boolean isExpired() {

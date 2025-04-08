@@ -21,7 +21,10 @@ public class HubSpotContactsController {
     }
 
     @Retryable(
-            retryFor = { HttpServerErrorException.class },
+            retryFor = {
+                    HttpServerErrorException.class,
+                    HttpClientErrorException.TooManyRequests.class
+            },
             maxAttempts = 3,
             backoff = @Backoff(delay = 1500)
     )
