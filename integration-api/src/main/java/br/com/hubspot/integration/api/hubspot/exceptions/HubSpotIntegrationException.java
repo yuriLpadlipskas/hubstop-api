@@ -1,6 +1,5 @@
 package br.com.hubspot.integration.api.hubspot.exceptions;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 
 @Getter
