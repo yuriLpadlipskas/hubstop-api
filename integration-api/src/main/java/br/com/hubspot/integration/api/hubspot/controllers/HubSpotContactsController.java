@@ -9,9 +9,12 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
+
+@Tag(name = "Hubspot Contacts", description = "Endpoints relacionados ao Hubspot contacts")
 @RestController
 @RequestMapping("/contacts")
 public class HubSpotContactsController {

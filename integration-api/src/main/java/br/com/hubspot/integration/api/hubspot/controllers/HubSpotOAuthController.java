@@ -2,11 +2,13 @@ package br.com.hubspot.integration.api.hubspot.controllers;
 
 import br.com.hubspot.integration.api.hubspot.dtos.HubSpotErrorResponseDTO;
 import br.com.hubspot.integration.api.hubspot.services.oauth.IHubSpotOAuthService;
+import io.swagger.v3.oas.annotations.Hidden;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.net.URI;
 
-
+@Tag(name = "Hubspot OAuth", description = "Endpoints relacionados ao Hubspot OAuth")
 @RestController
 @RequestMapping("/oauth")
 public class HubSpotOAuthController {
@@ -29,7 +31,7 @@ public class HubSpotOAuthController {
     @Operation(
             summary = "Gerar e retornar a URL de autorização.",
             description = " Endpoint responsável por gerar e retornar a URL de autorização para iniciar o " +
-                    "fluxo OAuth com o HubSpot."
+                    "fluxo OAuth com o HubSpot (Caso queira testar, jogar a url de teste no navegador pois o navegador bloqueia o redirecionamento para outra url)."
     )
     @ApiResponses({
             @ApiResponse(
@@ -65,7 +67,7 @@ public class HubSpotOAuthController {
     @Operation(
             summary = "Trocar o código de autorização pelo token de acesso",
             description = "Endpoint recebe o código de autorização fornecido pelo HubSpot e realiza a" +
-                    "troca pelo token de acesso."
+                    "troca pelo token de acesso  (Caso queira testar, jogar a url de teste no navegador pois o navegador bloqueia o redirecionamento para outra url)."
     )
     @ApiResponses({
             @ApiResponse(
