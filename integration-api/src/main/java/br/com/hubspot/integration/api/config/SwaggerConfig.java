@@ -18,10 +18,10 @@ public class SwaggerConfig {
     public OpenApiCustomizer openApiCustomizer() {
         return openApi -> {
             Server server = new Server();
-            if ("prod".equalsIgnoreCase(activeProfile)) {
-                server.setUrl("https://hubspot-api-production.up.railway.app/hubspot");
-            } else {
+            if ("dev".equalsIgnoreCase(activeProfile)) {
                 server.setUrl("http://localhost:9091/hubspot");
+            } else {
+                server.setUrl("https://hubspot-api-production.up.railway.app/hubspot");
             }
             openApi.setServers(List.of(server));
         };

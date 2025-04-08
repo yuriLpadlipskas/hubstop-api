@@ -4,6 +4,8 @@ server:
     context-path: '/hubspot/'
 
 spring:
+  profiles:
+    active: default
   application:
     name: integration-api
   security:
