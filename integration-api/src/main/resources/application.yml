@@ -16,7 +16,7 @@ spring:
             client-id: cce10b2f-146d-4bcf-b68a-5ce7472da2ce
             client-secret: 836ad464-1f3a-4952-a4b0-6257e30fead4
             authorization-grant-type: authorization_code
-            redirect-uri: http://localhost:9091/hubspot/oauth/callback
+            redirect-uri: https://hubspot-api-production.up.railway.app/hubspot/oauth/callback
             scope: crm.objects.contacts.write, crm.objects.contacts.read
         provider:
           hubspot:
@@ -31,7 +31,7 @@ hubspot:
       secret: 836ad464-1f3a-4952-a4b0-6257e30fead4
     scope: "crm.objects.contacts.write crm.objects.contacts.read"
     redirect:
-      uri: http://localhost:9091/hubspot/oauth/callback
+      uri: https://hubspot-api-production.up.railway.app/hubspot/oauth/callback
   url:
     token: https://api.hubapi.com/oauth/v1/token
     contacts: https://api.hubapi.com/crm/v3/objects/contacts
