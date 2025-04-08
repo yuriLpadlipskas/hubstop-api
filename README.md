@@ -169,6 +169,7 @@ Toda a documentação da API está disponível via Swagger nos seguintes links:
   - **Logs e métricas**:             Além de colocar mais logs para visibilidade, implementaria o Prometheues + Grafana para visualização das métricas e o dashboard do grafana.
   - **Token em cache**:              Inicialmente, pensei em utilizar a lib de cache do Spring (spring-boot-starter-cache), porém nunca tinha feito cache de aplicação manual e quis tentar.
   - **Criptografia de credenciais**: As credenciais da HubSpot estão visiveis dentro das properties, gostaria de deixar isso criptografado e até mesmo persistindo em banco para ficar mais seguro.
+  - **Webhook de contatos**:         O Webhook de contato funciona porém fiquei sem ideia do que fazer com ele depois que ele é acionado, por isso, ele está muito simples
 
 
 
