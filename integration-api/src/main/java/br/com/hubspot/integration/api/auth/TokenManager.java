@@ -1,4 +1,4 @@
-package br.com.hubspot.integration.api.token;
+package br.com.hubspot.integration.api.auth;
 
 import br.com.hubspot.integration.api.hubspot.dtos.TokenResponseDTO;
 import br.com.hubspot.integration.api.hubspot.services.oauth.IHubSpotOAuthService;

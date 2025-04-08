@@ -1,6 +1,6 @@
 package br.com.hubspot.integration.api.hubspot.services.oauth.impl;
 
-import br.com.hubspot.integration.api.token.TokenCache;
+import br.com.hubspot.integration.api.auth.TokenCache;
 import br.com.hubspot.integration.api.hubspot.client.HubSpotRestClient;
 import br.com.hubspot.integration.api.hubspot.dtos.HubSpotProfileResponseDTO;
 import br.com.hubspot.integration.api.hubspot.dtos.TokenResponseDTO;
