@@ -27,9 +27,4 @@ public class TokenCache {
         return tokenResponseDTO == null || Instant.now().isAfter(expiration);
     }
 
-    public void clearCache(){
-        tokenResponseDTO = null;
-        expiration = null;
-    }
-
 }

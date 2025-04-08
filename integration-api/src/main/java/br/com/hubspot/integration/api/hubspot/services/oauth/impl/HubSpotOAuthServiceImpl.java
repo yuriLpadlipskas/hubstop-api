@@ -84,7 +84,7 @@ public class HubSpotOAuthServiceImpl implements IHubSpotOAuthService {
         params.add("grant_type", "refresh_token");
         params.add("client_id", clientId);
         params.add("client_secret", clientSecret);
-        params.add("refresh_token", refreshToken);
+        params.add("refresh_token",  (refreshToken == null || refreshToken.isBlank()) ? "INVALID_TOKEN" : refreshToken);
         return hubspotRestClient.post(urlToken, params, TokenResponseDTO.class,new HttpHeaders(), MediaType.APPLICATION_FORM_URLENCODED);
     }
 
@@ -93,5 +93,6 @@ public class HubSpotOAuthServiceImpl implements IHubSpotOAuthService {
         HubSpotProfileResponseDTO response = hubspotRestClient.get(urlProfile.concat(token), HubSpotProfileResponseDTO.class);
         return urlRedirectHome.concat(response.hubId().toString()).concat(suffixRedirectHome);
     }
+
 
 }

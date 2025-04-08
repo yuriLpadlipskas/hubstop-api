@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  integration-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hubspot-api
+    ports:
+      - "9091:9091"
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev
+    volumes:
+      - .:/usr/src/app
+    restart: unless-stopped

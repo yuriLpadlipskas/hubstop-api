@@ -3,6 +3,7 @@ package br.com.hubspot.integration.api.hubspot.services.contacts.impl;
 import br.com.hubspot.integration.api.config.TokenManager;
 import br.com.hubspot.integration.api.hubspot.client.HubSpotRestClient;
 import br.com.hubspot.integration.api.hubspot.dtos.ContactRequestDTO;
+import br.com.hubspot.integration.api.hubspot.dtos.DefaultResponseDTO;
 import br.com.hubspot.integration.api.hubspot.services.contacts.IHubSpotContactsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,13 +28,13 @@ public class HubSpotContactsServiceImpl implements IHubSpotContactsService {
     }
 
     @Override
-    public String createContact(ContactRequestDTO contactRequestDTO) {
+    public DefaultResponseDTO createContact(ContactRequestDTO contactRequestDTO) {
         log.info("1.0 init createContact dto: {}", contactRequestDTO);
         HttpHeaders headers = new HttpHeaders();
         headers.add("authorization",tokenManager.generateBearerToken());
         Object response = hubspotRestClient.post(urlContact,contactRequestDTO,Object.class,headers,MediaType.APPLICATION_JSON);
         log.info("2.0 init createContact response: {}", response);
-        return "Successfully to created contact";
+        return DefaultResponseDTO.builder().message("Successfully to created contact").success(true).build();
     }
 
     @Override

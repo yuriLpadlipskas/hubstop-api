@@ -1,7 +1,6 @@
 package br.com.hubspot.integration.api.hubspot.client;
 
 import br.com.hubspot.integration.api.hubspot.exceptions.HubSpotIntegrationException;
-import com.sun.net.httpserver.HttpsParameters;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -51,7 +50,7 @@ public class HubSpotRestClient {
             log.error("POST request failed: {}", e.getResponseBodyAsString());
             throw new HubSpotIntegrationException("Error to call HubSpot",e.getStatusCode().value(),e.getResponseBodyAsString());
         } catch (Exception e){
-            log.error("Error to call HubSpot: {}", e.getMessage(), e);
+            log.error(" POST Error to call HubSpot: {}", e.getMessage());
             throw new HubSpotIntegrationException("Error to call HubSpot", 500, e.getMessage());
         }
     }

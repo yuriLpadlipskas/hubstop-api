@@ -16,8 +16,8 @@ public class TokenManager {
 
     public String getValidToken() {
         if (cache.isExpired()) {
-            cache.clearCache();
-            TokenResponseDTO newToken = hubspotOAuthService.refreshAccessToken(cache.getToken().refreshToken());
+            String refreshToken = cache.getToken() == null ? "INVALID_TOKEN" : cache.getToken().refreshToken();
+            TokenResponseDTO newToken = hubspotOAuthService.refreshAccessToken(refreshToken);
             cache.setToken(newToken);
         }
         return cache.getToken().accessToken();
