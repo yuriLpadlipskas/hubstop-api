@@ -116,11 +116,11 @@ Siga o **Swagger** para entender o fluxo completo de autenticação e uso da API
 ### 📦 Iniciando o projeto
 
 1. **Gerar URL de Autenticação**  
-   Acesse no navegador: [`https://hubspot-api-production.up.railway.app/hubspot/ouath/authorize-url`](https://hubspot-api-production.up.railway.app/hubspot/ouath/authorize-url)
+   Acesse no navegador: [`https://hubspot-api-production.up.railway.app/hubspot/oauth/authorize-url`](https://hubspot-api-production.up.railway.app/hubspot/oauth/authorize-url)
    Isso irá redirecionar você para a autenticação com a HubSpot.
 
 2. **Autenticar-se com a HubSpot**  
-Após autenticar, você será redirecionado automaticamente para o endpoint de callback da aplicação: [`https://hubspot-api-production.up.railway.app/hubspot/ouath/callback`](https://hubspot-api-production.up.railway.app/hubspot/ouath/callback)
+Após autenticar, você será redirecionado automaticamente para o endpoint de callback da aplicação: [`https://hubspot-api-production.up.railway.app/hubspot/oauth/callback`](https://hubspot-api-production.up.railway.app/hubspot/oauth/callback)
 
 3. **Criar Contato pela API**  
 Após estar autenticado, você pode usar a API para criar um novo contato: [`https://hubspot-api-production.up.railway.app/hubspot/contacts/create`](https://hubspot-api-production.up.railway.app/hubspot/contacts/create)
